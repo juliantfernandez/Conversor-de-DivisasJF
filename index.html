@@ -11,16 +11,15 @@
     <title>Conversor de Divisas</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg menu__letras">
+  <!--MENU-->
+    <nav class="navbar navbar-light navbar-expand-lg menu__letras">
         <div class="container-fluid">
-            <nav class="navbar navbar-light">
                 <div class="container-fluid">
                   <a class="navbar-brand menu__letras--icon" href="index.html">
                     <img src="media/icon-menu.png" alt="dolares icono" width="30" height="24" class="d-inline-block align-text-top">
                     <a class="menu__letras--icon"> Conversor de Divisas Fernandez </a>
                   </a>
                 </div>
-              </nav>
           <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,6 +31,7 @@
              </div>
         </div>
       </nav>
+      <!--MENU CAROUSEL-->
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -56,34 +56,44 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+<!--CONVERSOR DE DIVISAS-->
       <main class="bg-light">
     <h1 class="titulo__principal__conversor">Conversor de Divisas Fernandez</h1>
-    <form class="conversor" name="conversor">
-       <h4>Conversor de Dolares</h4> 
-       <h4 class="dolarValor__letter">Valor del dolar: $95.06</h4>
-    <!--<select>
-        <option id="pesoArgentino" value="1">Pesos Argentinos</option>
-    </select>    
-    A
-    <select id="divisas">
-        <option id="BTC" value="2">Bitcoin</option>
-        <option id="ETH" value="3">Ethereum</option>
-        <option id="USD" value="4">Dolares</option>
-    </select>--> 
-    
-    Cantidad USD 
-    <br>
-    <input type="text" name="dolar">
-    <br>
-    <br>
-    Cantidad Pesos Argentinos 
-    <br>
-     <input type="text" name="pesos"><br>
-    <button type="button" class="btn-calculate" value="convertir" id="btnCalcular" onclick="convertir()">Calcular</button>
+    <form class="conversor">
+      Cantidad <input type="number" id="cantidad" min="0" value="0" onclick="convertir()">
+      <br>
+      <br>
+      Convertir De:
+      <select id="de" onchange="convertir()">
+          <option value="1">Peso</option>
+          <option value="2">Dolar</option>
+          <option value="3">Euro</option>
+          <option value="4">Bitcoin</option>
+          <option value="5">Ethereum</option>
+      </select><br><br>
+      Convertir A
+      <select id="a" onchange="convertir()">
+          <option value="1">Peso</option>
+          <option value="2">Dolar</option>
+          <option value="3">Euro</option>
+          <option value="4">Bitcoin</option>
+          <option value="5">Ethereum</option>
+
+      </select><br>
+      <h1 id="resultado">Resultado: $0.00</h1>
+     
+  </center>
+    <button type="button" class="btn-calculate" onclick="convertir()">Calcular</button>
     </form>
     <br>
     <br>
+    
+  
+    
+  </section>
       </main>
+
+      <!--FOOTER-->
       <footer>
 
       </footer>

@@ -26,6 +26,18 @@ body{
     text-decoration: none;
 
 }
+.menu__letras2{
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: green;
+}
 
 
 /*BANNER*/
@@ -50,13 +62,13 @@ body{
 
 .btn-calculate{
     border-color: greenyellow;
-    border-radius:20px;
+    border-radius:15px;
     margin: 10px 0px 10px 80px;
     
 }
 
 .btn-calculate:hover{
-background-color: rgba(255, 208, 0, 0.959);
+background-color: rgba(0, 208, 0, 0.959);
 }
 
 .dolarValor__letter{
