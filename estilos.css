@@ -75,3 +75,77 @@ background-color: rgba(0, 208, 0, 0.959);
     font-size: 18px;
     margin: 20px;
 }
+
+/*VALOR DIVISAS E ICONOS*/
+.titulo__principal__divisas{
+    text-align: center;
+    margin: 30px;
+    border-bottom: 2px green solid;
+
+}
+
+.padre{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+
+}
+.dolar-icon{
+    width: 80px;
+    height: 100px;
+    margin-left: 40%;
+    cursor: pointer;
+}
+.valorDivisas{
+    font-size: 30px;
+    margin-right: 35%;
+    margin-top: 2%;
+}
+
+.padrev2{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.valorCriptoDivisas{
+    font-size: 30px;
+    margin-right: 30%;
+    margin-top: 2%;
+}
+
+
+
+@media (max-width: 991px) {
+    .padre{
+        display: flex;
+        justify-content: space-between;
+        margin: 40px;
+    
+    }
+    .dolar-icon{
+        width: 80px;
+        height: 100px;
+        margin-left: 10%;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    .valorDivisas{
+        font-size: 24px;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+    
+    .padrev2{
+        display: flex;
+        justify-content: space-between;
+        margin: 40px;
+    }
+    
+    .valorCriptoDivisas{
+        font-size: 24px;
+        margin-right: 5%;
+        margin-top: 2%;
+    }
+
+ }

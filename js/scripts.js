@@ -143,6 +143,26 @@ document.getElementById("resultado").innerHTML="Resultado $"+resultado.toFixed(2
 }
 
 
+////FUNCION DE ICONOS/////
 
+function verValorDelDolar () {
+    let valorDolar = document.getElementById("valorDolar");
+    valorDolar.innerText="Valor del dolar: $95.06";
 
+}
+
+function verValorDelEuro () {
+    let valorEuro = document.getElementById("valorEuro");
+    valorEuro.innerText="Valor del Euro: $113.61";
+}
+
+function verValorDelBTC () {
+    let valorBTC = document.getElementById("valorBTC");
+    valorBTC.innerText="Valor del BTC: $3727229.26";
+}
+
+function verValorDelETH () {
+    let valorETH = document.getElementById("valorETH");
+    valorETH.innerText="Valor del ETH: $230454.09";
+}
 

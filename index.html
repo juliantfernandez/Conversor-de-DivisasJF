@@ -26,8 +26,8 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-              <a class="nav-link" href="#">Divisas Disponibles</a>
-              <a class="nav-link" href="#">Valor de Divisas</a>
+              <a class="nav-link" href="#divisasDisponibles">Divisas Disponibles</a>
+              <a class="nav-link" href="#divisasDisponibles">Valor de Divisas</a>
              </div>
         </div>
       </nav>
@@ -57,7 +57,7 @@
         </button>
       </div>
 <!--CONVERSOR DE DIVISAS-->
-      <main class="bg-light">
+      <main class="bg-light container-fluid">
     <h1 class="titulo__principal__conversor">Conversor de Divisas Fernandez</h1>
     <form class="conversor">
       Cantidad <input type="number" id="cantidad" min="0" value="0" onclick="convertir()">
@@ -79,7 +79,7 @@
           <option value="4">Bitcoin</option>
           <option value="5">Ethereum</option>
 
-      </select><br>
+      </select><br><br>
       <h1 id="resultado">Resultado: $0.00</h1>
      
   </center>
@@ -88,9 +88,28 @@
     <br>
     <br>
     
-  
-    
   </section>
+
+<h3 class="titulo__principal__divisas" id="divisasDisponibles">Divisas Disponibles</h3>
+  <div class="padre">
+    <img src="media/dollar-sign-solid.svg" type="button" onclick="verValorDelDolar()" class="dolar-icon" alt="icono dolar">
+    <h5 id="valorDolar" class="valorDivisas">***</h5>
+  </div>
+
+  <div class="padre">
+    <img src="media/euro-sign-solid.svg" type="button" onclick="verValorDelEuro()" class="dolar-icon" alt="icono euro">
+    <h5 id="valorEuro" class="valorDivisas">***</h5>
+  </div>
+
+  <div class="padrev2">
+    <img src="media/bitcoin-brands.svg" type="button" onclick="verValorDelBTC()" class="dolar-icon"  alt="icono bitcoin">
+    <h5 id="valorBTC" class="valorCriptoDivisas">*****</h5>
+  </div>
+
+  <div class="padrev2">
+    <img src="media/ethereum-brands.svg" type="button" onclick="verValorDelETH()" class="dolar-icon"  alt="icono ethereum">
+    <h5 id="valorETH" class="valorCriptoDivisas">*****</h5>
+  </div>
       </main>
 
       <!--FOOTER-->
