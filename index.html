@@ -57,7 +57,8 @@
         </button>
       </div>
 <!--CONVERSOR DE DIVISAS-->
-      <main class="bg-light container-fluid">
+      <main class="container-fluid">
+       
     <h1 class="titulo__principal__conversor">Conversor de Divisas Fernandez</h1>
     <form class="conversor">
       Cantidad <input type="number" id="cantidad" min="0" value="0" onclick="convertir()">
@@ -81,42 +82,40 @@
 
       </select><br><br>
       <h1 id="resultado">Resultado: $0.00</h1>
-     
-  </center>
-    <button type="button" class="btn-calculate" onclick="convertir()">Calcular</button>
+      <button type="button" class="btn-calculate" onclick="convertir()">Calcular</button>
     </form>
-    <br>
-    <br>
-    
-  </section>
+  </center>
 
-<h3 class="titulo__principal__divisas" id="divisasDisponibles">Divisas Disponibles</h3>
+<h3 class="titulo__principal__divisas" id="divisasDisponibles">Divisas Disponibles y Valor</h3>
+<h5 style="text-align: center; margin-top: 55px;">Click en los iconos para ver sus valores!</h5>
   <div class="padre">
-    <img src="media/dollar-sign-solid.svg" type="button" onclick="verValorDelDolar()" class="dolar-icon" alt="icono dolar">
-    <h5 id="valorDolar" class="valorDivisas">***</h5>
+    <img src="media/dollar-sign-solid.svg" id="muestraValorDolar"  class="dolar-icon" alt="icono dolar">
+    <p id="valorDolar" style="display: none;" class="valorDivisas">Valor del dolar: $95.06</p>
   </div>
 
   <div class="padre">
-    <img src="media/euro-sign-solid.svg" type="button" onclick="verValorDelEuro()" class="dolar-icon" alt="icono euro">
-    <h5 id="valorEuro" class="valorDivisas">***</h5>
+    <img src="media/euro-sign-solid.svg" id="muestraValorEuro" class="dolar-icon" alt="icono euro">
+    <h5 id="valorEuro" style="display: none;" class="valorDivisas">Valor del Euro: $113.61</h5>
   </div>
 
   <div class="padrev2">
-    <img src="media/bitcoin-brands.svg" type="button" onclick="verValorDelBTC()" class="dolar-icon"  alt="icono bitcoin">
-    <h5 id="valorBTC" class="valorCriptoDivisas">*****</h5>
+    <img src="media/bitcoin-brands.svg" id="muestraValorBTC" class="dolar-icon"  alt="icono bitcoin">
+    <h5 id="valorBTC" style="display: none;" class="valorCriptoDivisas">Valor del BTC: $3727229.26</h5>
   </div>
 
   <div class="padrev2">
-    <img src="media/ethereum-brands.svg" type="button" onclick="verValorDelETH()" class="dolar-icon"  alt="icono ethereum">
-    <h5 id="valorETH" class="valorCriptoDivisas">*****</h5>
+    <img src="media/ethereum-brands.svg" id="muestraValorETH" class="dolar-icon"  alt="icono ethereum">
+    <h5 id="valorETH" style="display: none;" class="valorCriptoDivisas">Valor del ETH: $230454.09</h5>
   </div>
+
       </main>
 
       <!--FOOTER-->
       <footer>
 
       </footer>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="js/scripts.js"></script>
 </body>
 </html>

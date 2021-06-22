@@ -1,4 +1,4 @@
-
+//FUNCION DE EMULADOR//
 function convertir()
 {
     var valor = parseFloat(document.getElementById("cantidad").value);
@@ -143,26 +143,62 @@ document.getElementById("resultado").innerHTML="Resultado $"+resultado.toFixed(2
 }
 
 
-////FUNCION DE ICONOS/////
+////FUNCION DE ICONOS CON JQUERY/////
 
-function verValorDelDolar () {
-    let valorDolar = document.getElementById("valorDolar");
-    valorDolar.innerText="Valor del dolar: $95.06";
+$("#muestraValorDolar").click(function(){
+    $("#valorDolar").fadeIn(1000)});
 
-}
+$("#muestraValorEuro").click(function(){
+    $("#valorEuro").fadeIn(1000)});
 
-function verValorDelEuro () {
-    let valorEuro = document.getElementById("valorEuro");
-    valorEuro.innerText="Valor del Euro: $113.61";
-}
+$("#muestraValorBTC").click(function(){
+    $("#valorBTC").fadeIn(1000)});
 
-function verValorDelBTC () {
-    let valorBTC = document.getElementById("valorBTC");
-    valorBTC.innerText="Valor del BTC: $3727229.26";
-}
+$("#muestraValorETH").click(function(){
+    $("#valorETH").fadeIn(1000)
+});
+    
 
-function verValorDelETH () {
-    let valorETH = document.getElementById("valorETH");
-    valorETH.innerText="Valor del ETH: $230454.09";
-}
+
+
+
+
+//////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//function verValorDelDolar () {
+ //   let valorDolar = document.getElementById("valorDolar");
+   // valorDolar.innerText="Valor del dolar: $95.06";
+//}
+
+//function verValorDelEuro () {
+   // let valorEuro = document.getElementById("valorEuro");
+   // valorEuro.innerText="Valor del Euro: $113.61";
+//}
+
+//function verValorDelBTC () {
+   // let valorBTC = document.getElementById("valorBTC");
+   // valorBTC.innerText="Valor del BTC: $3727229.26";
+//}
+
+//function verValorDelETH () {
+    //let valorETH = document.getElementById("valorETH");
+    //valorETH.innerText="Valor del ETH: $230454.09";
+//}
 

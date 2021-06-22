@@ -52,7 +52,7 @@ body{
 
 .titulo__principal__conversor{
     text-align: center;
-    margin: 30px;
+    margin-top: 10px;
     border-bottom: 2px solid black;
 }
 
@@ -79,8 +79,9 @@ background-color: rgba(0, 208, 0, 0.959);
 /*VALOR DIVISAS E ICONOS*/
 .titulo__principal__divisas{
     text-align: center;
-    margin: 30px;
-    border-bottom: 2px green solid;
+    margin: 10px;
+    width: auto;
+    border-bottom: 1px green solid;
 
 }
 
@@ -95,6 +96,7 @@ background-color: rgba(0, 208, 0, 0.959);
     height: 100px;
     margin-left: 40%;
     cursor: pointer;
+    border-radius: 30px;
 }
 .valorDivisas{
     font-size: 30px;
@@ -113,6 +115,8 @@ background-color: rgba(0, 208, 0, 0.959);
     margin-right: 30%;
     margin-top: 2%;
 }
+
+
 
 
 
