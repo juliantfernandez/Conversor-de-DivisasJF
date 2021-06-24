@@ -61,24 +61,24 @@
        
     <h1 class="titulo__principal__conversor">Conversor de Divisas Fernandez</h1>
     <form class="conversor">
-      Cantidad <input type="number" id="cantidad" min="0" value="0" onclick="convertir()">
+      Cantidad <input type="number" id="cantidad" min="0" value="0">
       <br>
       <br>
       Convertir De:
-      <select id="de" onchange="convertir()">
-          <option value="1">Peso</option>
-          <option value="2">Dolar</option>
-          <option value="3">Euro</option>
-          <option value="4">Bitcoin</option>
-          <option value="5">Ethereum</option>
+      <select id="convertirDe">
+          <option value="ARS">Peso</option>
+          <option value="USD">Dolar</option>
+          <option value="EUR">Euro</option>
+          <option value="BTC">Bitcoin</option>
+          <option value="ETH">Ethereum</option>
       </select><br><br>
       Convertir A
-      <select id="a" onchange="convertir()">
-          <option value="1">Peso</option>
-          <option value="2">Dolar</option>
-          <option value="3">Euro</option>
-          <option value="4">Bitcoin</option>
-          <option value="5">Ethereum</option>
+      <select id="convertirA">
+          <option value="ARS">Peso</option>
+          <option value="USD">Dolar</option>
+          <option value="EUR">Euro</option>
+          <option value="BTC">Bitcoin</option>
+          <option value="ETH">Ethereum</option>
 
       </select><br><br>
       <h1 id="resultado">Resultado: $0.00</h1>
@@ -87,7 +87,7 @@
   </center>
 
 <h3 class="titulo__principal__divisas" id="divisasDisponibles">Divisas Disponibles y Valor</h3>
-<h5 style="text-align: center; margin-top: 55px;">Click en los iconos para ver sus valores!</h5>
+<section id="seccionValores"> 
   <div class="padre">
     <img src="media/dollar-sign-solid.svg" id="muestraValorDolar"  class="dolar-icon" alt="icono dolar">
     <p id="valorDolar" style="display: none;" class="valorDivisas">Valor del dolar: $95.06</p>
@@ -107,6 +107,7 @@
     <img src="media/ethereum-brands.svg" id="muestraValorETH" class="dolar-icon"  alt="icono ethereum">
     <h5 id="valorETH" style="display: none;" class="valorCriptoDivisas">Valor del ETH: $230454.09</h5>
   </div>
+</section>
 
       </main>
 
