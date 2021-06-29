@@ -1,3 +1,93 @@
+$(document).ready(function() {
+    //dolar Oficial
+    const dolarOficialAPI = 'https://api-dolar-argentina.herokuapp.com/api/dolaroficial';
+    $.ajax({
+        method: "GET",
+        url: dolarOficialAPI,
+        success: function(data) {
+                console.log("Data que retorna dolar:");
+                console.log(data);
+                $("#dolarValorAPI").prepend("<tr><td>"+ "Dolar Oficial" +"</td><td>" + data.compra + "</td><td>" + data.venta +"</td><td>"+data.fecha + "</td></tr>");
+                $("#dolarAPI").prepend("<h3>"+"$"+ data.compra + "</h3>");
+            }
+            
+    });
+    //dolar Blue
+    const dolarBlueAPI = 'https://api-dolar-argentina.herokuapp.com/api/dolarblue';
+    $.ajax({
+        method: "GET",
+        url: dolarBlueAPI,
+        success: function(data) {
+                console.log("Data que retorna dolar:");
+                console.log(data);
+                $("#dolarValorAPI").prepend("<tr><td>"+ "Dolar Blue" +"</td><td>" + data.compra + "</td><td>" + data.venta +"</td><td>"+data.fecha + "</td></tr>");
+            }
+        
+    });
+
+    //Euro
+    const euroAPI = 'https://api-dolar-argentina.herokuapp.com/api/euro/nacion';
+    $.ajax ({
+        method: "GET",
+        url: euroAPI,
+        success: function(data) {
+            console.log("Data que retorna euro:");
+                console.log(data);
+                $("#dolarValorAPI").append("<tr><td>"+ "Euro Banco Nacion" +"</td><td>" + data.compra + "</td><td>" + data.venta +"</td><td>"+data.fecha + "</td></tr>");
+                $("#euroAPI").prepend("<h5>"+ "$"+ data.compra + "</h5>");
+            
+        }
+    });
+
+    const realAPI = 'https://api-dolar-argentina.herokuapp.com/api/real/nacion';
+    $.ajax ({
+        method: "GET",
+        url: realAPI,
+        success: function(data){
+            console.log("Data que retorna real: ");
+            console.log(data);
+            $("#dolarValorAPI").append("<tr><td>"+ "Real Banco Nacion" +"</td><td>" + data.compra + "</td><td>" + data.venta +"</td><td>"+data.fecha + "</td></tr>");
+
+        }
+    });
+
+
+    const ethAPI = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum";
+    $.ajax ({
+        method: "GET",
+        url: ethAPI,
+        success: function(data){
+            console.log("Data que retorna ETH: ");
+            console.log(data);
+            let datos = data;
+            datos.forEach(ethValor => {
+                $("#dolarValorAPI").append("<tr><td>" + ethValor.name + "</td><td>" + ethValor.current_price+" USD" +"</td><td>"+" - " + "</td><td>" + ethValor.last_updated + "</td></tr>");
+                $("#_ethAPI").prepend("<h3>"+ ethValor.current_price+" USD" + "</h3>");
+            });
+
+        }
+    });
+    const btcAPI = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin";
+    $.ajax ({
+        method: "GET",
+        url: btcAPI,
+        success: function(data){
+            console.log("Data que retorna BTC: ");
+            console.log(data);
+            let datos2 = data; 
+            datos2.forEach(btcValor => {
+                $("#dolarValorAPI").append("<tr><td>" + btcValor.name + "</td><td>" + btcValor.current_price+" USD" +"</td><td>"+" - " + "</td><td>" + btcValor.last_updated + "</td></tr>");
+                $("#_btcAPI").prepend("<h3>"+ btcValor.current_price+" USD" + "</h3>");
+            });
+        }
+    });
+   
+
+
+    
+});
+
+
 //FUNCION DE EMULADOR//
 function convertir()
 {
@@ -139,7 +229,7 @@ else if(convertirDe==3&&convertirA==5){
 else{
     resultado=valor;
 }
-document.getElementById("resultado").innerHTML="Resultado $"+resultado.toFixed(2);
+$("#resultado").html("Resultado $" + resultado.toFixed(2));
 }
 
 
@@ -158,13 +248,6 @@ $("#muestraValorBTC").click(function(){
 $("#muestraValorETH").click(function(){
     $("#valorETH").fadeIn(1000)
 });
-    
-
-
-
-
-
-//////////////////////////////////////////////////
 
 
 
@@ -183,23 +266,8 @@ $("#muestraValorETH").click(function(){
 
 
 
-//function verValorDelDolar () {
- //   let valorDolar = document.getElementById("valorDolar");
-   // valorDolar.innerText="Valor del dolar: $95.06";
-//}
 
-//function verValorDelEuro () {
-   // let valorEuro = document.getElementById("valorEuro");
-   // valorEuro.innerText="Valor del Euro: $113.61";
-//}
 
-//function verValorDelBTC () {
-   // let valorBTC = document.getElementById("valorBTC");
-   // valorBTC.innerText="Valor del BTC: $3727229.26";
-//}
 
-//function verValorDelETH () {
-    //let valorETH = document.getElementById("valorETH");
-    //valorETH.innerText="Valor del ETH: $230454.09";
-//}
+
 

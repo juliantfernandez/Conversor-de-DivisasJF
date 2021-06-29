@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,30 +84,54 @@
       <h1 id="resultado">Resultado: $0.00</h1>
       <button type="button" class="btn-calculate" onclick="convertir()">Calcular</button>
     </form>
-  </center>
+
+  <!--DIVISAS DISPONIBLES-->
 
 <h3 class="titulo__principal__divisas" id="divisasDisponibles">Divisas Disponibles y Valor</h3>
 <section id="seccionValores"> 
   <div class="padre">
     <img src="media/dollar-sign-solid.svg" id="muestraValorDolar"  class="dolar-icon" alt="icono dolar">
-    <p id="valorDolar" style="display: none;" class="valorDivisas">Valor del dolar: $95.06</p>
+    <p id="valorDolar" style="display: none;" class="valorDivisas">Valor del dolar: <span id="dolarAPI"></span></p>
   </div>
 
   <div class="padre">
     <img src="media/euro-sign-solid.svg" id="muestraValorEuro" class="dolar-icon" alt="icono euro">
-    <h5 id="valorEuro" style="display: none;" class="valorDivisas">Valor del Euro: $113.61</h5>
+    <p id="valorEuro" style="display: none;" class="valorDivisas">Valor del Euro: <span id="euroAPI"></span></p>
   </div>
 
   <div class="padrev2">
     <img src="media/bitcoin-brands.svg" id="muestraValorBTC" class="dolar-icon"  alt="icono bitcoin">
-    <h5 id="valorBTC" style="display: none;" class="valorCriptoDivisas">Valor del BTC: $3727229.26</h5>
+    <p id="valorBTC" style="display: none;" class="valorCriptoDivisas">Valor del BTC: <span id="_btcAPI"></span></p>
   </div>
 
   <div class="padrev2">
     <img src="media/ethereum-brands.svg" id="muestraValorETH" class="dolar-icon"  alt="icono ethereum">
-    <h5 id="valorETH" style="display: none;" class="valorCriptoDivisas">Valor del ETH: $230454.09</h5>
+    <p id="valorETH" style="display: none;" class="valorCriptoDivisas">Valor del ETH: <span id="_ethAPI"></span></p>
   </div>
 </section>
+
+<!--VALOR DOLAR-->
+<section class="container-fluid">
+  <h4 class="valorDolarTitle">Valor de Divisas</h4>
+  <table class="table">
+    <thhead>
+      <tr>
+        <th>MONEDA</th>
+        <th>COMPRA</th>
+        <th>VENTA</th>
+        <th>FECHA</th>
+      </tr>
+    </thhead>
+      <tbody id="dolarValorAPI">
+        <!--INGRESAN VALORES DE API-->
+      </tbody>
+    </thhead>
+  </table>
+</section>
+
+
+
+
 
       </main>
 
