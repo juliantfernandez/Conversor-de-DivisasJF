@@ -8,6 +8,7 @@
     <link href="estilos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Conversor de Divisas</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
                 <div class="container-fluid">
                   <a class="navbar-brand menu__letras--icon" href="index.html">
                     <img src="media/icon-menu.png" alt="dolares icono" width="30" height="24" class="d-inline-block align-text-top">
-                    <a class="menu__letras--icon"> Conversor de Divisas Fernandez </a>
+                    <a class="menu__letras--icon"> CONVERSOR DE DIVISAS FERNANDEZ </a>
                   </a>
                 </div>
           <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,6 +30,7 @@
               <a class="nav-link" href="#divisasDisponibles">Divisas Disponibles</a>
               <a class="nav-link" href="#divisasDisponibles">Valor de Divisas</a>
              </div>
+        </div>
         </div>
       </nav>
       <!--MENU CAROUSEL-->
@@ -57,7 +59,7 @@
         </button>
       </div>
 <!--CONVERSOR DE DIVISAS-->
-      <main class="container-fluid">
+      <main class="container">
        
     <h1 class="titulo__principal__conversor">Conversor de Divisas Fernandez</h1>
     <form class="conversor">
@@ -66,52 +68,31 @@
       <br>
       Convertir De:
       <select id="convertirDe">
-          <option value="ARS">Peso</option>
-          <option value="USD">Dolar</option>
-          <option value="EUR">Euro</option>
-          <option value="BTC">Bitcoin</option>
-          <option value="ETH">Ethereum</option>
+          <option value="1">Peso</option>
+          <option value="2">Dolar</option>
+          <option value="3">Dolar Blue</option>
+          <option value="4">Real</option>
+          <option value="5">Euro</option>
+          <option value="6">Bitcoin</option>
+          <option value="7">Ethereum</option>
       </select><br><br>
       Convertir A
       <select id="convertirA">
-          <option value="ARS">Peso</option>
-          <option value="USD">Dolar</option>
-          <option value="EUR">Euro</option>
-          <option value="BTC">Bitcoin</option>
-          <option value="ETH">Ethereum</option>
+        <option value="1">Peso</option>
+        <option value="2">Dolar</option>
+        <option value="3">Dolar Blue</option>
+        <option value="4">Real</option>
+        <option value="5">Euro</option>
+        <option value="6">Bitcoin</option>
+        <option value="7">Ethereum</option>
 
       </select><br><br>
       <h1 id="resultado">Resultado: $0.00</h1>
       <button type="button" class="btn-calculate" onclick="convertir()">Calcular</button>
     </form>
 
-  <!--DIVISAS DISPONIBLES-->
-
-<h3 class="titulo__principal__divisas" id="divisasDisponibles">Divisas Disponibles y Valor</h3>
-<section id="seccionValores"> 
-  <div class="padre">
-    <img src="media/dollar-sign-solid.svg" id="muestraValorDolar"  class="dolar-icon" alt="icono dolar">
-    <p id="valorDolar" style="display: none;" class="valorDivisas">Valor del dolar: <span id="dolarAPI"></span></p>
-  </div>
-
-  <div class="padre">
-    <img src="media/euro-sign-solid.svg" id="muestraValorEuro" class="dolar-icon" alt="icono euro">
-    <p id="valorEuro" style="display: none;" class="valorDivisas">Valor del Euro: <span id="euroAPI"></span></p>
-  </div>
-
-  <div class="padrev2">
-    <img src="media/bitcoin-brands.svg" id="muestraValorBTC" class="dolar-icon"  alt="icono bitcoin">
-    <p id="valorBTC" style="display: none;" class="valorCriptoDivisas">Valor del BTC: <span id="_btcAPI"></span></p>
-  </div>
-
-  <div class="padrev2">
-    <img src="media/ethereum-brands.svg" id="muestraValorETH" class="dolar-icon"  alt="icono ethereum">
-    <p id="valorETH" style="display: none;" class="valorCriptoDivisas">Valor del ETH: <span id="_ethAPI"></span></p>
-  </div>
-</section>
-
 <!--VALOR DOLAR-->
-<section class="container-fluid">
+<section class="valorDolarSection" id="divisasDisponibles">
   <h4 class="valorDolarTitle">Valor de Divisas</h4>
   <table class="table">
     <thhead>
@@ -128,16 +109,49 @@
     </thhead>
   </table>
 </section>
-
-
-
-
-
       </main>
 
       <!--FOOTER-->
-      <footer>
-
+      <footer class="page-footer font-small black pt-4 container">
+        <div class="container-fluid text-center text-md-left">
+          <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+              <h5 class="footer-title">Conversor de Divisas Fernandez</h5>
+              <p>Somos un conversor de las monedas mas utilizadas actualmente en el mundo.</p>
+      
+            </div>
+      
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-3 mb-md-0 mb-3">
+              <h5 class="text-uppercase">¿Como Comunicarte con nosotros?</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> Calle 999
+                </li>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i> 11 22334455
+                </li>
+                <li>
+                  <i class="fas fa-envelope" aria-hidden="true"></i> divisasfernandez@gmail.com
+                </li>
+              </ul>
+      
+            </div>
+            <div class="col-md-3 mb-md-0 mb-3">
+      
+              <h5 class="text-uppercase">Seguinos en Nuestras Redes!</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fab fa-instagram" aria-hidden="true"><a href="#" class="footer-media"></i> Conversor de Divisas Fernandez</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright text-center py-3 IndexCarrouselLetraM">© 2021 Conversor de Divisas Fernandez
+        </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
