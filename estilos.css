@@ -122,6 +122,14 @@ background-color: rgba(0, 208, 0, 0.959);
     margin-top: 6%;
 }
 
+.warning{
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+.warning a{
+    color: rgb(255, 238, 0);
+}
 /*VALOR DOLAR*/
 .valorDolarSection{
     margin-top: 1%;
@@ -152,8 +160,6 @@ footer{
     
     color: #1df700
 }
-
-
 
 
 

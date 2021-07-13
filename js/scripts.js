@@ -1,16 +1,39 @@
 //FUNCION DE EMULADOR//
 function convertir()
-{
+{   
+    //DOLAR OFICIAL
+    $.get('https://api-dolar-argentina.herokuapp.com/api/dolaroficial').done(function(dolarOficialValor){
+
+        //DOLAR BLUE
+        $.get('https://api-dolar-argentina.herokuapp.com/api/dolarblue').done(function(dolarBlueValor){
+
+
+            //EURO
+            $.get('https://api-dolar-argentina.herokuapp.com/api/euro/nacion').done(function(euroValor){
+    
+
+                //REAL
+                $.get('https://api-dolar-argentina.herokuapp.com/api/real/nacion').done(function(realValor){
+        
+                
+            //BTC
+            $.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin').done(function(BTCValor){
+                console.log("VALOR QUE RETORNA BTC");
+                console.log(BTCValor.current_price);
+          
+        
+    
     var valor = parseFloat($("#cantidad").val());
     var convertirDe = $("#convertirDe").val();
     var convertirA = $("#convertirA").val();
-    var dolar = 95.35;
-    var dolarBlue = 175.00;
-    var real = 18.30;
-    var euro = 112.50;
+    var dolar = dolarOficialValor.compra;
+    var dolarBlue = dolarBlueValor.compra;
+    var real = realValor.compra;
+    var euro = euroValor.compra;
     var bitcoin = 3727229.26;
     var ethereum = 230454.09;
     resultado = 0;
+
 
 //PESO Y DOLAR
 //Peso a Dolar
@@ -252,6 +275,11 @@ else{
     resultado=valor;
 }
 $("#resultado").html("Resultado $" + resultado.toFixed(2));
+});
+});
+});
+});
+});
 }
 
 //APIS
